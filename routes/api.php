@@ -24,6 +24,6 @@ Route::resource('modulos', 'ModulosController', ['only' => ['show']]);
 
 //CONFIGURACION DE USUARIOS
 Route::resource('usuarios', 'UserConfig\UserController', ['except' => ['destroy']]);
-Route::resource('log', 'UserConfig\LogUserController', ['only' => ['show']]);
-Route::resource('oficinas', 'UserConfig\OficinaController', ['except' => ['destroy']]);
-Route::resource('aduanas', 'UserConfig\AduanaController', ['except' => ['destroy']]);
+Route::resource('log', 'UserConfig\LogUserController', ['only' => ['index', 'show']]);
+Route::resource('oficinas', 'UserConfig\OficinaController', ['only' => ['index', 'show']]);
+Route::resource('aduanas', 'UserConfig\AduanaController', ['only' => ['index', 'show']]);
