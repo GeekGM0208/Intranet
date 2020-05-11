@@ -2,6 +2,7 @@
 
 namespace App\UserConfig;
 
+use App\UserConfig\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Oficina extends Model
@@ -12,4 +13,9 @@ class Oficina extends Model
         'nombre_grupo',
         'abreviacion_oficina'
     ];
+
+    public function usuarios()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

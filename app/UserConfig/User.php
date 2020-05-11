@@ -2,6 +2,7 @@
 
 namespace App\UserConfig;
 
+use App\UserConfig\Oficina;
 use Illuminate\Support\Str;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -46,6 +47,12 @@ class User extends Authenticatable
         'remember_token',
         'verification_token'
     ];
+
+
+    public function oficinas()
+    {
+        return $this->belongsToMany(Oficina::class);
+    }
 
     /**
      * The attributes that should be cast to native types.

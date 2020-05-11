@@ -2,6 +2,7 @@
 
 namespace App\UserConfig;
 
+use App\UserConfig\Oficina;
 use Illuminate\Database\Eloquent\Model;
 
 class Aduana extends Model
@@ -10,4 +11,9 @@ class Aduana extends Model
         'id_oficina',
         'nombre_aduana'
     ];
+
+    public function oficina()
+    {
+        return $this->belongsTo(Oficina::class);
+    }
 }
