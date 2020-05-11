@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Modulos extends Model
+class Modulo extends Model
 {
     protected $fillable =   [
         'modulo_padre',
