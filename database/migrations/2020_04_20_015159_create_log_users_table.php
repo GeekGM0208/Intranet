@@ -15,7 +15,11 @@ class CreateLogUsersTable extends Migration
     {
         Schema::create('log_users', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_usuario')->unsigned();
+            $table->dateTime('fecha_acceso');
             $table->timestamps();
+
+            $table->foreign('id_usuario')->references('id')->on('users');
         });
     }
 

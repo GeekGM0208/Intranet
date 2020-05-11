@@ -15,6 +15,10 @@ class CreateOficinasTable extends Migration
     {
         Schema::create('oficinas', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre_oficina');
+            $table->string('telefono_oficina');
+            $table->string('nombre_grupo');
+            $table->string('abreviacion_oficina');
             $table->timestamps();
         });
     }
